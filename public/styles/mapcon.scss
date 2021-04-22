@@ -1,0 +1,145 @@
+    //颜色引用
+    $bgcolor-1:#0f3a65;
+    $bgcolor-2:#0d131a;
+    $bgcolor-3:#0f1519;
+    $bgcolor-4:#1a9bd3;
+    $color-white:#fff;
+    //字体大小定义
+    $font-size-12:12px;
+    $font-size-14:14px;
+    $font-size-16:16px;
+    $font-size-18:18px;
+    $font-size-20:20px;
+    $font-size-25:25px;
+    //字体调整的差量
+    $size:0;
+    $size-4:1px;
+    $size-6:2px;
+    $size-8:3px;
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        height: 30px;
+        background-color: $bgcolor-1;
+        border-radius: 6px;
+        outline: 1px solid $color-white;
+        outline-offset: -2px;
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: $bgcolor-2;
+        border-radius: 2px;
+    }
+  .el-container{
+      position: fixed;
+      top: 0;
+      width: auto;
+      height: 100%;
+      background-color: $bgcolor-3;
+      color: $color-white;
+    }
+    .el-header .imgpic{
+      padding: 8px 0;
+      height: 44px;
+    }
+    .el-header .layer-drawer-close{
+      position: absolute;
+      right: 8px;
+      top: 15px;
+      font-size: $font-size-25;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .el-main{
+      padding: 6px 0px;
+      height: calc(100% - 120px);
+    }
+    .el-main .el-row{
+      height: 100%;
+      overflow: hidden;
+    }
+    .upload-map{
+      display: grid;
+    }
+    .upload-map .el-button{
+      width: 100%;
+      font-size: $font-size-16;
+      margin-top: 15px;
+    }
+    .grid-content{
+      width: 344px;
+      padding:0 8px;
+    }
+    .grid-sidebar{
+      width: 45px;
+    }
+    .anlysis-layer-color{
+      background: $bgcolor-3;
+      color:$color-white;
+      border: 1px solid hsla(0,0%,86.3%,.4);
+      border-radius: 8px;
+      text-align: left;
+    }
+    .anlysis-tool {
+      margin-bottom: 12px;
+    }
+    .anlysis-tool .head-icon{
+      float: right;
+      padding:3px;
+      font-size: $font-size-16;
+     }
+    .anlysis-tool .tool-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        text-align: center;
+        border: 1px solid $bgcolor-4;
+        color: $bgcolor-4;
+        position: relative;
+        margin-right: 10px;
+        font-size: $font-size-25;
+        cursor: pointer;
+    }
+    .anlysis-tool .anlysis-btn {
+        background-color: $bgcolor-4;
+    }
+    .el-card .el-card__body{
+      padding: 0;
+    }
+    .layer-switch-content {
+      height: calc(100% - 188px);
+      overflow: hidden;
+    }
+    .layer-switch-content .layer-content {
+        height: 550px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: auto;
+        display: inline-block;
+    }
+    .layer-switch-content .layer-content label{
+        display: block;
+        overflow: hidden;
+        height: 135px;
+        width: 285px;
+        margin-right: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        position: relative;
+        border: 2px solid hsla(0,0%,86.3%,.4);
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+    .layer-switch-content .layer-content img{
+      width: 100%;
+      height: 100%;
+    }
