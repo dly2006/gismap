@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <gismap msg="map bg"/>
+    <gishtml msg="map bg"/>
     <mapcon msg="map con"/>
   </div>
 </template>
 
 <script>
-import gismap from './components/gismap.vue';
+import gishtml from './components/gishtml.vue';
 import mapcon from './mapcon.vue';
 export default {
   name: 'app',
   components: {
-    gismap,
+    gishtml,
     mapcon
   }
 }

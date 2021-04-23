@@ -33,6 +33,12 @@
         background-color: $bgcolor-2;
         border-radius: 2px;
     }
+    .map {
+      position: fixed;
+      background-color: $bgcolor-2;
+      height: 100%;
+      width: 100%;
+    }
   .el-container{
       position: fixed;
       top: 0;
@@ -110,6 +116,9 @@
     .anlysis-tool .anlysis-btn {
         background-color: $bgcolor-4;
     }
+    .anlysis-tool .anlysis-btn i{
+      color:$color-white;
+    }
     .el-card .el-card__body{
       padding: 0;
     }
@@ -118,10 +127,10 @@
       overflow: hidden;
     }
     .layer-switch-content .layer-content {
-        height: 550px;
+        height: 540px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        overflow: auto;
+        overflow-x: hidden;
         display: inline-block;
     }
     .layer-switch-content .layer-content label{
@@ -138,6 +147,9 @@
         -webkit-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
+    }
+    .layer-switch-content .layer-content .label-border{
+        border: 2px solid $bgcolor-4;
     }
     .layer-switch-content .layer-content img{
       width: 100%;

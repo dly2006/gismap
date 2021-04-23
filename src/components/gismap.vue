@@ -1,6 +1,9 @@
 <template>
-
-  <div id="map" class="map"><img src="../../public/images/gismap.png" width="100%" /></div>
+  <div id="map" class="map">
+      <VueDragResize :isActive="true" :w="1000" :h="666" :parentScaleX="0.5" :parentScaleY="0.5" :aspectRatio ="true" :x="380" :y="100" :z="999" v-on:resizing="resize" v-on:dragging="resize">
+          <img src="../../public/images/result1.png" width="100%" height="100%" />
+      </VueDragResize>
+  </div>
 </template>
 <script>
 import "ol/ol.css";
@@ -11,13 +14,22 @@ import XYZ from "ol/source/XYZ";
 import TileWMS from "ol/source/TileWMS.js";
 // 格式化地理坐标
 import { fromLonLat } from "ol/proj.js";
+//拖拽，放大缩小
+import VueDragResize from 'vue-drag-resize';
 export default {
   data() {
     return {
       map: null,
       //后台服务器地址
       urlRoot: "http://193.112.110.27:8080/geoserver/gee/wms?",
+      width: 0,
+      height: 0,
+      top: 0,
+      left: 0
     };
+  },
+  components: {
+      VueDragResize
   },
   mounted() {
     this.init();
@@ -49,7 +61,13 @@ export default {
         logo: false
       });
 
-    }
+    },
+    resize(newRect) {
+                    this.width = newRect.width;
+                    this.height = newRect.height;
+                    this.top = newRect.top;
+                    this.left = newRect.left;
+                }
   }
 };
 </script>
@@ -57,7 +75,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .map {
-    position: absolute;
+    position: fixed;
+    background-color: #0d131a;
     height: 100%;
     width: 100%;
   }

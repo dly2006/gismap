@@ -14,12 +14,16 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "axios": "^0.21.1",
     "element-ui": "^2.15.1",
     "node-sass": "^4.14.1",
     "ol": "^6.5.0",
+    "qs.js": "^0.1.12",
     "vue": "^2.5.2",
     "vue-devtools": "^5.1.4",
-    "vue-router": "^3.0.1"
+    "vue-drag-resize": "^1.5.1",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
