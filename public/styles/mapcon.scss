@@ -48,8 +48,22 @@
       color: $color-white;
     }
     .el-header .imgpic{
+      float: left;
+      margin-right: 5px;
       padding: 8px 0;
       height: 44px;
+    }
+    .el-header .imgword{
+      padding: 10px 0;
+      text-align: left;
+    }
+    .el-header .imgword .spanone{
+      display: block;
+      font-size: $font-size-18;
+      letter-spacing: 8px;
+    }
+    .el-header .imgword .spantwo{
+      font-size: $font-size-12;
     }
     .el-header .layer-drawer-close{
       position: absolute;

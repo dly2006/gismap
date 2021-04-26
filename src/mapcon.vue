@@ -2,6 +2,10 @@
    <el-container class="grid-content" @click="show()">
        <el-header>
        <img src="../public/images/logo.png" class="imgpic" />
+       <div class="imgword">
+       <span class="spanone">国地科技</span>
+       <span class="spantwo">Guodi Technology</span>
+       </div>
        <a class="layer-drawer-close"><i class="el-icon-arrow-left"></i></a>
      </el-header>
       <el-main>
