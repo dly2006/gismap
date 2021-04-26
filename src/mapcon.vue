@@ -1,13 +1,13 @@
 <template>
-   <el-container class="grid-content" @click="show()">
-       <el-header>
-       <img src="../public/images/logo.png" class="imgpic" />
-       <div class="imgword">
-       <span class="spanone">国地科技</span>
-       <span class="spantwo">Guodi Technology</span>
-       </div>
-       <a class="layer-drawer-close"><i class="el-icon-arrow-left"></i></a>
-     </el-header>
+   <el-container class="grid-content animate__animated animate__fadeIn" v-if="isShow">
+      <el-header>
+         <img src="../public/images/logo.png" class="imgpic" />
+         <div class="imgword">
+         <span class="spanone">国地科技</span>
+         <span class="spantwo">Guodi Technology</span>
+         </div>
+         <a class="layer-drawer-close" @click="show(num)"><i class="el-icon-arrow-left"></i></a>
+      </el-header>
       <el-main>
          <el-row>
             <el-col :span="24">
@@ -53,6 +53,11 @@
         </el-upload>
       </el-footer>
    </el-container>
+   <el-container class="animate__animated animate__fadeInRight" v-else>
+     <el-header>
+        <a class="layer-drawer-close" @click="show(false)"><i class="el-icon-arrow-right"></i></a>
+     </el-header>
+   </el-container>
 </template>
 <script>
 import { Loading } from 'element-ui';
@@ -64,6 +69,8 @@ export default {
       current:0,
       currentList:0,
       exploreData:'',
+      isShow:true, //侧边栏切换状态
+      num:true, //点击切换状态
       urlApiName : 'http://10.1.15.29:8556/',
       actionUrl:'http://10.1.15.29:8556/uploadImg',
       todos: [
@@ -142,8 +149,8 @@ export default {
               api.$emit("addmu",picName)
               loading.close();
               this.$message({
-                  message: '识别成功!',
-                  duration: 1000,
+                  message: '识别成功，请等待地图数据加载!',
+                  duration: 3000,
                   showClose: true,
                   type: 'success'
               })
@@ -222,8 +229,12 @@ export default {
       },
       //侧边栏隐藏切换，暂无添加
       show:function(num){
-         if(num!=''){this.a+=num}
-         else{this.a++}
+         if(num!= true){
+           this.isShow = true;
+         }
+         else{
+           this.isShow = false;
+         }
       }
   }
 }
