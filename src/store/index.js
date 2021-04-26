@@ -7,10 +7,10 @@ export default new Vuex.Store({
     state:{
       count: 1
     },
-    mutations:{
-  
+    mutations: {
+      addmu(state){state.count++},
     },
-    actions:{
-  
+    actions: {
+      addac({commit}){commit('addmu')},
     }
 })

@@ -4,21 +4,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state:{
-    city:1 //初始值
+    count:1 //初始值
   },
-  getters:{
-    getCity(state){
-      return state.city
-    }
+  mutations: {
+    addmu(state){state.count++},
+    lessmu(state){state.count--}
   },
-  mutations:{
-    setCity(state,name){
-      state.city = name;
-    }
-  },
-  actions:{
-    setCityName({commit,state},name){
-      commit('setCity',name)
-    }
+  actions: {
+    addac({commit}){commit('addmu')},
+    lessac({commit}){commit('lessmu')}
   }
 })
